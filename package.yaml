@@ -1,0 +1,49 @@
+name: servant-header-verb
+
+language: GHC2021
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Wextra
+
+default-extensions:
+  - BlockArguments
+  - DataKinds
+  - FunctionalDependencies
+  - LambdaCase
+  - OverloadedStrings
+  - TypeFamilies
+  - UndecidableInstances
+
+dependencies:
+  - base >= 4.14 && < 5
+  - bytestring
+  - case-insensitive
+  - containers
+  - deepseq
+  - http-api-data
+  - http-media
+  - http-types
+  - servant
+  - servant-client
+  - servant-client-core
+  - servant-server
+  - singleton-bool
+  - text
+
+library:
+  source-dirs: src
+
+tests:
+  servant-header-verb-spec:
+    source-dirs: spec
+    main: Main.hs
+    build-tools:
+      - hspec-discover
+    dependencies:
+      - servant-header-verb
+      - free
+      - hspec
+      - hspec-wai
+      - wai

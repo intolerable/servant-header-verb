@@ -1,0 +1,86 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           servant-header-verb
+version:        0.0.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Servant.API.Header.HeaderList
+      Servant.API.Modifiers.Generalized
+      Servant.API.Verbs.Header
+  other-modules:
+      Paths_servant_header_verb
+  hs-source-dirs:
+      src
+  default-extensions:
+      BlockArguments
+      DataKinds
+      FunctionalDependencies
+      LambdaCase
+      OverloadedStrings
+      TypeFamilies
+      UndecidableInstances
+  ghc-options: -Wall -Wcompat -Wextra
+  build-depends:
+      base >=4.14 && <5
+    , bytestring
+    , case-insensitive
+    , containers
+    , deepseq
+    , http-api-data
+    , http-media
+    , http-types
+    , servant
+    , servant-client
+    , servant-client-core
+    , servant-server
+    , singleton-bool
+    , text
+  default-language: GHC2021
+
+test-suite servant-header-verb-spec
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Servant.API.Header.HeaderListSpec
+      Servant.API.Verbs.HeaderSpec
+      Paths_servant_header_verb
+  hs-source-dirs:
+      spec
+  default-extensions:
+      BlockArguments
+      DataKinds
+      FunctionalDependencies
+      LambdaCase
+      OverloadedStrings
+      TypeFamilies
+      UndecidableInstances
+  ghc-options: -Wall -Wcompat -Wextra
+  build-tool-depends:
+      hspec-discover:hspec-discover
+  build-depends:
+      base >=4.14 && <5
+    , bytestring
+    , case-insensitive
+    , containers
+    , deepseq
+    , free
+    , hspec
+    , hspec-wai
+    , http-api-data
+    , http-media
+    , http-types
+    , servant
+    , servant-client
+    , servant-client-core
+    , servant-header-verb
+    , servant-server
+    , singleton-bool
+    , text
+    , wai
+  default-language: GHC2021
