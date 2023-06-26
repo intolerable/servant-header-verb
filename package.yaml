@@ -1,4 +1,5 @@
 name: servant-header-verb
+version: 0.1.0.0
 
 language: GHC2021
 
